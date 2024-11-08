@@ -26,8 +26,8 @@ Para executar as aplicações, é necessário ter o Go instalado na máquina. A 
 1. Clone o repositório e navegue até o diretório do projeto.
    
    ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd <DIRETORIO_DO_PROJETO>
+   git clone https://github.com/brunoofgod/goexpert-lesson-1.git
+   cd goexpert-lesson-1
    ```
 
 2. Compile e execute o servidor:
