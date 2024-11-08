@@ -66,6 +66,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		logger.Println("Ocorreu um erro ao gravar os dados: ", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")

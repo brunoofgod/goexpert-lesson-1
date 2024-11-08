@@ -26,7 +26,7 @@ func main() {
 	res, err := http.DefaultClient.Do(req)
 	if ctx != nil && ctx.Err() == context.DeadlineExceeded {
 		logger.Println("Operação cancelada por timeout. Maximo aceito é 300ms")
-		panic(err)
+		panic(ctx.Err())
 	}
 
 	if err != nil {
@@ -52,13 +52,13 @@ func saveExchangeIntoFile(body io.Reader) error {
 	var result string
 	err = json.NewDecoder(body).Decode(&result)
 	if err != nil {
-		return fmt.Errorf("falha ao decodificar resposta: %w", err)
+		return fmt.Errorf("Falha ao decodificar resposta: %w", err)
 	}
 
 	_, err = f.WriteString("Dólar: " + result + "\n")
 
 	if err != nil {
-		return fmt.Errorf("falha ao salvar o arquivo: %w", err)
+		return fmt.Errorf("Falha ao salvar o arquivo: %w", err)
 	}
 
 	f.Close()
