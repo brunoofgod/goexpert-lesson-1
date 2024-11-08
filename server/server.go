@@ -46,7 +46,7 @@ func main() {
 
 	db.AutoMigrate(&CurrencyDetails{})
 
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/cotacao", handler)
 	http.ListenAndServe(":8080", nil)
 }
 

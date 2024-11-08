@@ -33,6 +33,7 @@ Para executar as aplicações, é necessário ter o Go instalado na máquina. A 
 2. Compile e execute o servidor:
    ```bash
    cd server
+   go mod tidy
    go build -o server server.go 
    ./server
    ```
@@ -42,6 +43,7 @@ Para executar as aplicações, é necessário ter o Go instalado na máquina. A 
 1. Em um novo terminal, no mesmo diretório, compile e execute o cliente:
    ```bash
    cd client
+   go mod tidy
    go build -o client client.go
    ./client
    ```
