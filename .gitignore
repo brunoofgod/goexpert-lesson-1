@@ -1,2 +1,3 @@
 server/go.sum
 server/currency_exchange.db
+client/cotacao.txt
